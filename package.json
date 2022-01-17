@@ -69,8 +69,9 @@
       ]
     },
     "win": {
+      "icon": "assets/icons/icon.ico",
+      "artifactName": "${productName}_setup_${version}.${ext}",
       "target": [
-        "squirrel",
         "nsis"
       ]
     },
@@ -88,11 +89,12 @@
     "extraResources": [
       "./assets/**"
     ],
-    "publish": {
-      "provider": "github",
-      "owner": "electron-react-boilerplate",
-      "repo": "electron-react-boilerplate"
-    }
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://113.200.234.211:5051/releases/"
+      }
+    ]
   },
   "repository": {
     "type": "git",
@@ -258,5 +260,6 @@
       }
     ],
     "singleQuote": true
-  }
+  },
+  "__npminstall_done": false
 }
